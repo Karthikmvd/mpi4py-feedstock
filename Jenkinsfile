@@ -1,9 +1,11 @@
 pipeline {
-    agent {
-        docker { image 'condaforge/linux-anvil' }
-    }
+    agent none
     stages {
         stage('Test') {
+            
+            agent {
+        docker { image 'condaforge/linux-anvil' }
+          }
             steps {
                 echo 'Building..'
                 sh 'yum install -y wget openssh-clients bzip2'
