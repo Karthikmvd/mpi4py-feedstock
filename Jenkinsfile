@@ -1,23 +1,12 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { image 'condaforge/linux-anvil' }
+    }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
                 echo 'Building..'
                 sh 'ci_support/run_docker_build.sh'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                
-                
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
             }
         }
     }
