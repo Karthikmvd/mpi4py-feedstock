@@ -1,6 +1,6 @@
 pipeline {
      agent {
-        docker { image 'centos/python-35-centos7' }
+        docker { image 'kamasubb/conda-forge-linux-anvil-ppc64le' }
           }
     stages {
         stage('Test') {
