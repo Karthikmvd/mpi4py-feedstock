@@ -6,7 +6,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Building..'
-                yum install -y wget openssh-clients bzip2
+                'yum install -y wget openssh-clients bzip2'
                 sh 'ci_support/run_docker_build.sh'
             }
         }
