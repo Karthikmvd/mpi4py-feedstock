@@ -1,6 +1,6 @@
 pipeline {
      agent {
-        docker { image 'condaforge/linux-anvil' }
+        docker { image 'node:7-alpine' }
           }
     stages {
         stage('Test') {
