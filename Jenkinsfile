@@ -1,6 +1,6 @@
 pipeline {
      agent {
-        docker { image 'docker pull centos/python-35-centos7' }
+        docker { image 'centos/python-35-centos7' }
           }
     stages {
         stage('Test') {
