@@ -1,6 +1,6 @@
 pipeline {
      agent {
-        docker { image 'richxsl/rhel7' }
+        docker { image 'docker pull centos/python-35-centos7' }
           }
     stages {
         stage('Test') {
