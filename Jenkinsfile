@@ -1,6 +1,6 @@
 pipeline {
      agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'richxsl:rhel7' }
           }
     stages {
         stage('Test') {
