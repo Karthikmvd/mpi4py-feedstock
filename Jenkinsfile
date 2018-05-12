@@ -2,9 +2,7 @@ pipeline {
      agent any
     stages {
         stage('Build') {
-            
-           
-            steps {
+           steps {
                 echo 'Building..'
                 sh 'ci_support/run_docker_build.sh'
             }
